@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VINDEX | Garante de Cumplimiento</title>
+  <meta name="description"
+    content="VINDEX: Sistema de vigilancia activa para líderes. Asegura el cumplimiento de tareas mediante persistencia y estadística fina.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="https://vindex-gestor.web.app/pwa-192x192.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- Cache busting script: Unregister any lingering PWA Service Workers from the React app -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        let hasUnregistered = false;
+        for(let registration of registrations) {
+          registration.unregister();
+          hasUnregistered = true;
+          console.log('Unregistered lingering service worker.');
+        }
+        if (hasUnregistered) {
+          // Force a hard reload from the server once SWs are cleared
+          window.location.reload(true);
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class="bg-mesh"></div>
+
+  <header>
+    <div class="logo-container">
+      <img src="https://vindex-gestor.web.app/logo-final-v7.png" alt="VINDEX">
+    </div>
+  </header>
+
+  <main id="panels-container">
+    <!-- VENTANA 1 -->
+    <section class="window window-1" id="win1">
+      <div class="window-title">
+        <h2>¿Qué es VINDEX?</h2>
+        <p>Pulsa para descubrir</p>
+      </div>
+      <div class="infographic">
+        <button class="close-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5" />
+            <path d="M4 9h12a5 5 0 0 1 0 10H11" />
+          </svg>
+        </button>
+        <h2>Qué es VINDEX?</h2>
+        <div class="infographic-content">
+          <div class="info-item-visual">
+            <div class="icon">🎯</div>
+            <p>VINDEX es un sistema de seguimiento a las tareas que un líder asigna a sus colaboradores.</p>
+          </div>
+          <div class="info-item-visual">
+            <div class="icon">🛑</div>
+            <p>VINDEX se encarga de que las tareas no se queden en “Pendientes” de manera indefinida</p>
+          </div>
+          <div class="info-item-visual">
+            <div class="icon">📅</div>
+            <p>VINDEX organiza las tareas por su prioridad de fechas para ayudarnos a organizar nuestro día a día.</p>
+          </div>
+          <div class="info-item-visual">
+            <div class="icon">🔔</div>
+            <p>VINDEX se basa en la persistencia como la estrategia del cumplimiento. Con base en emails y
+              notificaciones se encarga de que nadie eche al olvido una tarea</p>
+          </div>
+          <div class="info-item-visual">
+            <div class="icon">📊</div>
+            <p>VINDEX lleva una estadística muy fina, global y por colaborador, sobre la eficacia en el cumplimiento de
+              las tareas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTANA 2 -->
+    <section class="window window-2" id="win2">
+      <div class="window-title">
+        <h2>Así funciona VINDEX:</h2>
+        <p>El ciclo de persistencia</p>
+      </div>
+      <div class="infographic">
+        <button class="close-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5" />
+            <path d="M4 9h12a5 5 0 0 1 0 10H11" />
+          </svg>
+        </button>
+        <h2>Así funciona VINDEX:</h2>
+        <div class="infographic-vertical-steps">
+          <!-- Paso 1 -->
+          <div class="step-card-visual">
+            <div class="step-indicator">1</div>
+            <div class="step-body">
+              <p>👤 El líder se registra por primera vez</p>
+            </div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="step-card-visual">
+            <div class="step-indicator">2</div>
+            <div class="step-body">
+              <p>👥 El líder registra los colaboradores</p>
+            </div>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step-card-visual">
+            <div class="step-indicator">3</div>
+            <div class="step-body">
+              <p>📝 El líder le asigna una tarea a un colaborador</p>
+            </div>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="step-card-visual highlight-pink">
+            <div class="step-indicator">4</div>
+            <div class="step-body">
+              <p class="main-text">📩 A partir de este momento el colaborador recibe emails y una notificaciones al
+                celular cuando:</p>
+              <ul class="sub-list alpha two-col">
+                <li>1. EL líder le asigna la tarea</li>
+                <li>2. La tarea está próxima a vencerse</li>
+                <li>3. La tarea se venció.</li>
+                <li>4. Si la tarea continua vencida (diariamente)</li>
+                <li>5. Si la tarea fue reprogramada por el líder</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 5 -->
+          <div class="step-card-visual highlight-blue">
+            <div class="step-indicator">5</div>
+            <div class="step-body">
+              <p class="main-text">📢 EL líder también recibe notificaciones cuando:</p>
+              <ul class="sub-list alpha">
+                <li>1. Cuando el colaborador dio por terminada una tarea</li>
+                <li>2. La tarea asignada a un colaborador se venció.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 6 -->
+          <div class="step-card-visual">
+            <div class="step-indicator">6</div>
+            <div class="step-body">
+              <p>✅ El líder valida la tarea terminada. Si no se cumplió, puede reprogramarla 🔄 con nueva fecha límite.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTANA 3 -->
+    <section class="window window-3" id="win3">
+      <div class="window-title">
+        <h2>¿VINDEX es seguro?</h2>
+        <p>Confianza total PWA</p>
+      </div>
+      <div class="infographic">
+        <button class="close-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5" />
+            <path d="M4 9h12a5 5 0 0 1 0 10H11" />
+          </svg>
+        </button>
+        <h2>VINDEX es seguro?</h2>
+        <div class="infographic-content">
+          <div class="info-item-visual">
+            <p>VINDEX es una aplicación tipo PWA, no la vas a encontrar en las tiendas de aplicaciones, lo que te va
+              permitir instalarla como una aplicación nativa en iOS, Android, PC o Mac, sin ocupar prácticamente ningún
+              espacio y permitiendo el control absoluto de la seguridad con esta arquitectura:</p>
+          </div>
+          <div class="security-visual-grid">
+            <div class="security-card">
+              <span class="lock">🔒</span>
+              <h4>AES-256</h4>
+              <p>Encriptación de grado militar que protege los datos en reposo, asegurando que solo los usuarios
+                autorizados puedan leer la información.</p>
+            </div>
+            <div class="security-card">
+              <span class="lock">🌐</span>
+              <h4>TLS 1,3</h4>
+              <p>Protocolo de transferencia segura de última generación que garantiza que la comunicación sea imposible
+                de interceptar.</p>
+            </div>
+            <div class="security-card">
+              <span class="lock">🔑</span>
+              <h4>Firma JWT</h4>
+              <p>Autenticación mediante Tokens Web de JSON, permitiendo sesiones seguras y persistentes sin enviar
+                contraseñas en cada solicitud.</p>
+            </div>
+            <div class="security-card">
+              <span class="lock">🛡️</span>
+              <h4>Aislamiento</h4>
+              <p>Arquitectura diseñada para que la información de cada empresa esté en contenedores lógicos separados,
+                sin riesgo de cruce de datos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTANA 4 -->
+    <section class="window window-4 window-disabled" id="win4" aria-disabled="true">
+      <div class="window-title">
+        <h2>Testimoniales:</h2>
+        <p>Voces del éxito</p>
+      </div>
+      <div class="infographic">
+        <button class="close-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5" />
+            <path d="M4 9h12a5 5 0 0 1 0 10H11" />
+          </svg>
+        </button>
+        <h2>Testimoniales:</h2>
+        <div class="infographic-content">
+          <div class="video-grid-visual">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-elite-wrap">
+    <div class="footer-cta-container">
+      <a href="https://vindex-gestor.web.app/" class="btn-elite-action">Empezar ahora - Es
+        gratis</a>
+      <div class="footer-bottom-notes">
+        <p>© 2026 VINDEX Software.</p>
+        <p>Contáctenos: <a href="mailto:vindex@vindex.info">vindex@vindex.info</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
